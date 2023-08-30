@@ -6,151 +6,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="images/icons/favicon-32x32.png">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #0b3757;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+.header-section {
+  background-color: #c7c8c9;
+}
+.nav-small {
+  background-color:  #0b3757;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.yellow-text {
+  color: #f3b91a;
 }
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-color: #eeeeee;
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-color:#c7c8c9;
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-.menu-color {
-    color: #0e0d10;
-}
-.menu-icon {
-    width: 30px;
-}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 </head>
-<body>
+<body class=" header-section">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button menu-color">HOME</a>
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="images/icons/android-chrome-512x512.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black yellow-text">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black yellow-text">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium nav-small" id="myNavbar">
+  <div class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button w3-text-white" style="width:25% !important">HOME</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-text-white" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center" id="home">
+    <img src="images/Arcline-LogoFinal_MainHorz-BlackYellow.png" alt="boy" class="w3-image" width="992" height="1108">
+    <p>ESA ECRA License #7016708</p>
+    <p>Electrical contractor specializing in pole line & underground services.</p>
+    
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-black w3-padding-64" id="contact">
+    <h2 class="">Contact</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p><i class="fa fa-map-marker fa-fw"></i> Saint Thomas, ON, Canada, Ontario</p>
+    <p><i class="fa fa-phone fa-fw"></i> Phone: +1 226-577-6399</p>
+    <p><i class="fa fa-envelope fa-fw"></i> Email: <a href="mailto:arclineelectricalservices@gmail.com">arclineelectricalservices@gmail.com</a></p>
+  </div>
   
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small menu-color"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-        <img src="images/Arcline-Icon-BlackYellow.png" class="menu-icon" alt="logo" />
-    </a>
-  </div>
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3-xlarge">
+    <a href="https://www.facebook.com/profile.php?id=100094474294278"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  <!-- End footer -->
+  </footer>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-  </div>
+<!-- END PAGE CONTENT -->
 </div>
-
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <img src="images/Arcline-MainHorz-BlackYellow.png" class="w3-center w3-image w3-animate-opacity" alt="logo" />
-    
-    <p class="w3-center">Electrical contractor specializing in pole line & underground services.</p>
-    <p class="w3-center">ESA ECRA License # 7016708</p>
-  </div>
-</div>
-
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container" id="contact">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-     <div class="w3-col m4 w3-container">
-      <img src="images/Arcline-LogoFinal_Icon-BlackYellow.png" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Saint Thomas, ON, Canada, Ontario<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 226-577-6399<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: <a href="mailto:arclineelectricalservices@gmail.com">arclineelectricalservices@gmail.com</a><br>
-      </div>
-    
-    </div>
-  </div>
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <a href="https://www.facebook.com/profile.php?id=100094474294278" title="Arcline" target="_blank" class="w3-hover-text-green"></a><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  </div>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
 
 </body>
 </html>
